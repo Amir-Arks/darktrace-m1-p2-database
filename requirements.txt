@@ -1,0 +1,23 @@
+# =============================================================================
+# DarkTrace M1 — Pod 2  |  M2 Database Layer (Anil Kumar)
+# Only database-related dependencies.
+# M3 (backend) will add FastAPI, Pydantic, etc. on top of this.
+# =============================================================================
+
+# ── ORM ───────────────────────────────────────────────────────────────────────
+sqlalchemy>=2.0.0          # dialect-agnostic ORM — works on SQLite + PostgreSQL
+
+# ── Migrations ────────────────────────────────────────────────────────────────
+alembic>=1.13.0            # version-controlled schema migrations
+
+# ── Database drivers ──────────────────────────────────────────────────────────
+# SQLite ships with Python — NO extra driver needed.
+
+# PostgreSQL (prod) — uncomment when connecting to PostgreSQL:
+# psycopg2-binary>=2.9.9   # sync PostgreSQL driver (easiest install)
+
+# ── Environment / config ──────────────────────────────────────────────────────
+python-dotenv>=1.0.0       # loads .env file for DATABASE_URL
+
+# ── Testing (DB layer only) ───────────────────────────────────────────────────
+pytest>=8.0.0
