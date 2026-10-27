@@ -21,7 +21,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="DarkTrace — Source & Crawl Job Service (Pod 2 / Member 2)",
+    title="DarkTrace — Source & Crawl Job Service (Pod 2)",
     description="Backend API and Database services for monitored Sources and Crawl Jobs.",
     version="1.0.0",
     lifespan=lifespan,
@@ -39,6 +39,19 @@ app.add_middleware(
 # Include routers
 app.include_router(source_router)
 app.include_router(crawl_job_router)
+
+
+@app.get("/", tags=["System"])
+def root():
+    """Root landing endpoint with service metadata and documentation links."""
+    return {
+        "title": "DarkTrace — Module 1 Pod 2 Database & Backend Service",
+        "status": "online",
+        "docs_url": "/docs",
+        "redoc_url": "/redoc",
+        "health_url": "/health",
+        "db": db_info(),
+    }
 
 
 @app.get("/health", tags=["System"])
