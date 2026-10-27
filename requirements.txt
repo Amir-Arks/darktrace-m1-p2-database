@@ -1,0 +1,19 @@
+# DarkTrace M1 Pod 2 - Common Database & Backend Requirements
+
+# API Framework
+fastapi>=0.110.0
+uvicorn[standard]>=0.28.0
+
+# Database & ORM
+sqlalchemy>=2.0.28
+alembic>=1.13.1
+psycopg[binary]>=3.1.18
+
+# Configuration & Validation
+pydantic>=2.6.0
+pydantic-settings>=2.2.0
+python-dotenv>=1.0.1
+
+# Testing
+pytest>=8.0.0
+httpx>=0.27.0
