@@ -28,7 +28,7 @@ def upgrade() -> None:
         sa.Column('fingerprint', sa.String(length=64), nullable=False),
         sa.Column('source_id', sa.Uuid(), nullable=False),
         sa.Column('doc_id', sa.String(length=64), nullable=True),
-        sa.Column('watchlist_id', sa.BigInteger(), nullable=True),
+        sa.Column('watchlist_id', sa.Integer().with_variant(sa.BigInteger(), 'postgresql'), nullable=True),
         sa.Column('severity', sa.Enum(*SEVERITIES, name='alert_severity', native_enum=False, length=20, create_constraint=True), nullable=False),
         sa.Column('confidence', sa.Float(), nullable=False),
         sa.Column('threat_score', sa.Integer(), nullable=False),
