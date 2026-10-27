@@ -10,12 +10,9 @@ This repository provides the core database architecture, SQLAlchemy 2.0 ORM laye
 
 | Member | Main Responsibility | Assigned Scope |
 | :--- | :--- | :--- |
-| **Md Amir Ashraf** | **Database Setup & Integration Coordinator** | **Shared DB foundation, session, Base, Alembic, conventions, coordination** |
+| **Md Amir Ashraf** | **Database Setup & Integration Coordinator** | **Shared DB foundation, session, Base, Alembic, conventions, coordination, alert deduplication & integration** |
 | **Anil Kumar** | Source + Crawl Job | `source`, `crawl_job` tables, crawling service & API |
 | **Nikhil** | Watchlist + Watchlist Version | `watchlist`, `watchlist_version` tables, versioning service & API |
-| **Prakash K** | Alerts + Deduplication | `alert` table, fingerprinting, deduplication service & API |
-| **Sriharish S** | Case + Investigation | `case_investigation` table, investigation service & API |
-| **Varun Sahu** | Audit + Migrations + Final Testing | `audit_event` table, migration sequencing, clean DB integration tests |
 
 ---
 

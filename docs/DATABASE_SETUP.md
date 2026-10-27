@@ -28,12 +28,9 @@ Each team member owns a specific database table and corresponding backend module
 
 | Team Member | Role | Assigned Tables / Modules | Key Files / Responsibilities |
 | :--- | :--- | :--- | :--- |
-| **Md Amir Ashraf** | **Database Setup & Integration Coordinator** | **Shared DB Infrastructure** | Database engine, sessionmaker, base model, Alembic setup, integration plan, docs |
+| **Md Amir Ashraf** | **Database Setup & Integration Coordinator** | **Shared DB Infrastructure, Alerts & Integration** | Database engine, sessionmaker, base model, Alembic setup, alert deduplication, integration testing, docs |
 | **Anil Kumar** | Source + Crawl Job | `source`, `crawl_job` | Source registry, crawl job tracking, crawling service & API |
 | **Nikhil** | Watchlist + Watchlist Version | `watchlist`, `watchlist_version` | Regex/keyword rule watchlists, immutable version history |
-| **Prakash K** | Alert + Deduplication | `alert` | Alert lifecycle, fingerprinting, deduplication logic |
-| **Sriharish S** | Case & Investigation | `case_investigation` | Investigation cases grouping alerts, evidence, and actors |
-| **Varun Sahu** | Audit + Migrations + Final Testing | `audit_event` | Hash-chained audit log, migration order coordination, clean DB tests |
 
 ---
 
@@ -204,7 +201,7 @@ alembic downgrade -1
 ```
 
 > [!IMPORTANT]
-> Varun Sahu coordinates the final Alembic migration sequence and tests. Coordinate with Varun before finalizing migration numbers to prevent multiple-head conflicts.
+> Md Amir Ashraf coordinates the final Alembic migration sequence and tests across the shared database foundation.
 
 ---
 

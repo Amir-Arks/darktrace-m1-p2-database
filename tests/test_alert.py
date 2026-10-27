@@ -2,7 +2,7 @@
 tests/test_alert.py
 Comprehensive test suite for Alert model, deduplication, and finite state transitions.
 
-Integrated from Prakash K's module with real Source (UUID) and Watchlist models.
+Test suite for Alert model, deduplication, and finite state transitions.
 """
 import uuid
 from datetime import datetime, timedelta, timezone
@@ -46,8 +46,8 @@ def session():
         # Create a test Login
         user = Login(
             login_id=uuid.uuid4(),
-            username="analyst_prakash",
-            email="prakash@darktrace.local",
+            username="analyst_sec",
+            email="analyst@darktrace.local",
             password_hash="argon2$fakehash",
             role="analyst",
         )

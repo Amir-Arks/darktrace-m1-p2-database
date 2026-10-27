@@ -2,9 +2,6 @@
 app/models/alert.py
 SQLAlchemy model for the `alert` table.
 
-Author: Prakash K (Alert Database + Deduplication)
-Integrated by: Md Amir Ashraf (Database Setup & Integration Coordinator)
-
 Covers:
 - Standard alert fields matching DarkTrace schema.
 - Foreign keys resolving to source.source_id (UUID) and watchlist.watchlist_id (BigInteger).

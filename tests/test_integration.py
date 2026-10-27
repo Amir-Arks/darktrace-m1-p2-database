@@ -141,7 +141,7 @@ def test_full_pod2_workflow_integration(integrated_session: Session):
     assert all_versions[1].version_number == 2
     assert watchlist.current_version_id == v2.version_id
 
-    # Step 7: Create Alert linked to Source and Watchlist (Prakash)
+    # Step 7: Create Alert linked to Source and Watchlist
     alert, created = record_alert(
         db,
         source_id=source.source_id,
