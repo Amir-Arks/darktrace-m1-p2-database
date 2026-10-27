@@ -13,6 +13,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # Import application settings and common DeclarativeBase
 from app.core.config import settings
 from app.db.base import Base
+import app.models  # Ensures all registered models load into Base.metadata
 
 # Alembic Config object, which provides access to values within the .ini file.
 config = context.config

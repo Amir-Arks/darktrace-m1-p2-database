@@ -60,6 +60,7 @@ pytest -v
 ## 📚 Complete Guides & Documentation
 
 - **[Detailed Database Setup & Integration Guide](docs/DATABASE_SETUP.md)**: Full guide covering PostgreSQL installation, Alembic migration workflow, common conventions, and module hand-off checklists.
+- **[Railway Production Deployment Guide](docs/RAILWAY_DEPLOYMENT.md)**: Instructions for provisioning Railway PostgreSQL and deploying the FastAPI service.
 
 ---
 
